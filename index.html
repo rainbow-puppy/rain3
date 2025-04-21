@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自适应网页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 菜单栏样式 */
+        .navbar {
+            height: 60px;
+            background-color: #0D0D0D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0 20px;
+        }
+
+        /* 模块样式 */
+        .module {
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        #module1 {
+            background-color: #2E6FF2;
+        }
+
+        #module2 {
+            background-color: #30D9A9;
+        }
+
+        #module3 {
+            display: flex;
+        }
+
+        #module3-left {
+            width: 30%;
+            background-color: #CEDEF2;
+            color: black;
+        }
+
+        #module3-right {
+            width: 70%;
+            background-color: #F2E307;
+            color: black;
+        }
+
+        /* 返回箭头样式 */
+        #back-to-top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            font-size: 36px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 菜单栏 -->
+    <div class="navbar">
+        <a href="#">首页</a>
+        <a href="#module1">模块一</a>
+        <a href="#module2">模块二</a>
+        <a href="#module3">模块三</a>
+    </div>
+
+    <!-- 模块一 -->
+    <div id="module1" class="module">
+        <!-- 替换为新图片 -->
+        <img src="img/cloud.png" alt="cloud" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+    </div>
+
+    <!-- 模块二 -->
+    <div id="module2" class="module">模块二</div>
+
+    <!-- 模块三 -->
+    <div id="module3">
+        <!-- 修改此处，添加文字 -->
+        <div id="module3-left" class="module">刘欣雨作业</div>
+        <div id="module3-right" class="module">
+            <!-- 嵌入 network2.html -->
+            <iframe src="network2.html" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- 返回箭头 -->
+    <div id="back-to-top" onclick="scrollToTop()">↑</div>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
